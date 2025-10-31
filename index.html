@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Alleya T. Almonte — Resume</title>
 <style>
-/* BODY & CONTAINER */
+/* BODY */
 body {
   font-family: 'Times New Roman', Times, serif;
   margin: 0;
@@ -17,7 +17,7 @@ body {
   background-position: center;
 }
 
-/* Container */
+/* CONTAINER */
 .container {
   max-width: 800px;
   margin: 40px auto;
@@ -27,7 +27,7 @@ body {
   box-shadow: 0 0 25px rgba(0,255,204,0.2);
 }
 
-/* Headers */
+/* HEADERS */
 h2 {
   color: #66ffe3;
   border-bottom: 1px solid #00ffcc;
@@ -61,8 +61,8 @@ li {
 }
 
 .header img.profile-pic {
-  width: clamp(50px,8vw,80px);
-  height: clamp(50px,8vw,80px);
+  width: clamp(50px, 8vw, 80px);
+  height: clamp(50px, 8vw, 80px);
   border-radius: 50%;
   border: 3px solid #00ffcc;
   flex-shrink: 0;
@@ -115,17 +115,32 @@ li {
   font-size: clamp(10px,1.5vw,14px);
 }
 
-/* Keep everything proportional on smaller screens */
+/* MEDIA QUERIES */
 @media (max-width: 900px) {
   .container {
-    padding: 50px;
-    margin: 50px auto;
+    padding: 20px; /* shrink padding instead of enlarging */
+    margin: 20px auto;
   }
   h2 {
     font-size: clamp(16px, 3vw, 22px);
   }
   p, li {
     font-size: clamp(12px, 2.5vw, 16px);
+  }
+}
+
+@media (max-width: 600px) {
+  .header {
+    flex-wrap: nowrap; /* keep straight line */
+  }
+  .header-info h1 {
+    font-size: clamp(12px, 3vw, 16px);
+  }
+  .header-info p {
+    font-size: clamp(10px, 2.5vw, 12px);
+  }
+  .contact {
+    font-size: clamp(10px, 2.5vw, 12px);
   }
 }
 </style>
