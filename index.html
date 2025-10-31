@@ -20,12 +20,13 @@ body {
 
 .container {
   max-width: 800px;
+  width: 100%;
   margin: 40px auto;
   padding: 40px;
   background: rgba(15, 25, 45, 0.95);
   border-radius: 20px;
   box-shadow: 0 0 25px rgba(0, 255, 204, 0.2);
-  overflow: hidden; /* prevents overlap */
+  box-sizing: border-box;
 }
 
 /* HEADERS */
@@ -43,7 +44,6 @@ ul {
 
 li {
   margin-bottom: 8px;
-  line-height: 1.4;
 }
 
 /* HEADER */
@@ -58,8 +58,8 @@ li {
   z-index: 1000;
   border-bottom: 2px solid #00ffcc;
   box-shadow: 0 0 15px rgba(0, 255, 204, 0.2);
-  gap: 10px;
-  white-space: nowrap;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .header img.profile-pic {
@@ -67,8 +67,8 @@ li {
   height: 80px;
   border-radius: 50%;
   border: 3px solid #00ffcc;
-  margin-left: 10px; /* slightly to the right */
   flex-shrink: 0;
+  margin-left: 10px;
 }
 
 .header-info {
@@ -87,7 +87,6 @@ li {
   margin: 2px 0 0 0;
   color: #a0a0a0;
   font-size: 14px;
-  word-wrap: break-word; /* prevents overflow */
 }
 
 .contact {
@@ -123,31 +122,26 @@ li {
   background: rgba(15, 25, 45, 0.95);
   border-radius: 20px;
   padding: 30px;
-  margin: 30px auto;
+  margin-top: 30px;
   box-shadow: 0 0 25px rgba(0, 255, 204, 0.2);
   text-align: center;
-  max-width: 800px;
-  overflow: hidden;
 }
 
 /* RESPONSIVE */
 @media (max-width: 900px) {
-  .header-info h1 { font-size: 16px; }
-  .header-info p, .contact { font-size: 12px; }
-  .header img.profile-pic { width: 60px; height: 60px; }
-  .container, .section.thank-you { padding: 30px; margin: 30px auto; }
+  /* Keep layout same, only scale text/images */
+  .header-info h1 { font-size: 18px; }
+  .header-info p, .contact { font-size: 14px; }
+  .header img.profile-pic { width: 70px; height: 70px; }
+  .container, .section.thank-you { padding: 40px; margin: 40px auto; }
 }
 
 @media (max-width: 600px) {
-  .header {
-    flex-wrap: nowrap;
-    padding: 10px 15px;
-  }
-  .header-info h1 { font-size: 14px; }
-  .header-info p, .contact { font-size: 10px; }
-  .header img.profile-pic { width: 50px; height: 50px; }
-  .contact span { display: none; }
-  .container, .section.thank-you { padding: 20px; margin: 20px auto; }
+  /* Keep everything in same position, do not stack */
+  .header { flex-wrap: nowrap; padding: 20px 15px; }
+  .header-info h1 { font-size: 16px; }
+  .header-info p, .contact { font-size: 12px; }
+  .header img.profile-pic { width: 60px; height: 60px; }
 }
 </style>
 </head>
