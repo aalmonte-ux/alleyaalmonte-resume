@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alleya T. Almonte — Resume</title>
+<style>
+/* BODY & CONTAINER */
+body {
+  font-family: 'Times New Roman', Times, serif;
+  margin: 0;
+  line-height: 1.6;
+  color: #e0e0e0;
+  background: linear-gradient(135deg, #0a0f24, #111b3d, #051937);
+  background-image: url('https://wallpapers.com/images/hd/tech-background-2jl385gyxj88j2xw.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 40px;
+  background: rgba(15, 25, 45, 0.95);
+  border-radius: 20px;
+  box-shadow: 0 0 25px rgba(0, 255, 204, 0.2);
+}
+
+/* HEADERS */
+h2 {
+  color: #66ffe3;
+  border-bottom: 1px solid #00ffcc;
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+li {
+  margin-bottom: 8px;
+}
+
+/* HEADER */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(15, 25, 45, 0.95);
+  padding: 20px 30px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 2px solid #00ffcc;
+  box-shadow: 0 0 15px rgba(0, 255, 204, 0.2);
+  gap: 10px;
+  white-space: nowrap;
+}
+
+.header img.profile-pic {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 3px solid #00ffcc;
+  flex-shrink: 0;
+  margin-left: 10px; /* move slightly right */
+}
+
+.header-info {
+  flex: 1 1 auto;
+  margin: 0 15px;
+  min-width: 0;
+}
+
+.header-info h1 {
+  font-size: 18px;
+  color: #00ffcc;
+  margin: 0;
+}
+
+.header-info p {
+  margin: 2px 0 0 0;
+  color: #a0a0a0;
+  font-size: 14px;
+}
+
+.contact {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-shrink: 0;
+  font-size: 14px;
+}
+
+.contact a {
+  color: #00ffcc;
+  text-decoration: none;
+}
+
+/* Sticky header */
+.header.sticky {
+  padding: 8px 20px;
+}
+
+/* Skills */
+.skills span {
+  display: inline-block;
+  background: #213571;
+  padding: 5px 10px;
+  border-radius: 8px;
+  margin: 3px;
+  color: #00ffcc;
+}
+
+/* Thank You Box */
+.section.thank-you {
+  background: rgba(15, 25, 45, 0.95);
+  border-radius: 20px;
+  padding: 30px;
+  margin-top: 30px;
+  box-shadow: 0 0 25px rgba(0, 255, 204, 0.2);
+  text-align: center;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .header-info h1 {
+    font-size: 16px;
+  }
+  .header-info p, .contact {
+    font-size: 12px;
+  }
+  .header img.profile-pic {
+    width: 60px;
+    height: 60px;
+  }
+  .container, .section.thank-you {
+    padding: 30px;
+    margin: 30px auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .header {
+    flex-wrap: nowrap;
+    padding: 10px 15px;
+  }
+  .header-info h1 {
+    font-size: 14px;
+  }
+  .header-info p, .contact {
+    font-size: 10px;
+  }
+  .header img.profile-pic {
+    width: 50px;
+    height: 50px;
+  }
+  .contact span {
+    display: none;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="header" id="header">
+  <img src="yourphoto.jpg" alt="Profile Picture" class="profile-pic">
+  <div class="header-info">
+    <h1>Alleya T. Almonte</h1>
+    <p>1st-year Computer Science Student | Ateneo de Naga University</p>
+  </div>
+  <div class="contact">
+    <a href="tel:09468549609">📞 09468549609</a>
+    <span>|</span>
+    <a href="mailto:aalmonte@gbox.adnu.edu.ph">✉️ aalmonte@gbox.adnu.edu.ph</a>
+    <span>|</span>
+    <a href="https://github.com/aalmonte-ux" target="_blank">GitHub</a>
+  </div>
+</div>
+
+<div class="container">
+  <div class="section">
+    <h2>About</h2>
+    <p>I am Alleya T. Almonte, a first-year Computer Science student at Ateneo de Naga University with a strong passion for technology and software development. My interest in programming started with curiosity about how websites and applications work, which led me to explore coding and problem-solving.</p>
+    <p>I focus on building a strong foundation in HTML, CSS, JavaScript, C++, and Python. I enjoy experimenting with web development projects that combine creativity and logic. My goal is to improve through school projects and internships that challenge me to think critically.</p>
+    <p>I aspire to become a skilled software engineer capable of designing systems and applications that solve real-world problems. I stay updated with the latest tools and trends to grow as a developer who creates meaningful solutions.</p>
+  </div>
+
+  <div class="section">
+    <h2>Education</h2>
+    <ul>
+      <li><strong>BS in Computer Science</strong> – Ateneo de Naga University (2025–Present)</li>
+      <li><strong>Senior High School</strong> – Camarines Sur National High School, Liboton Annex (2023–2025)</li>
+      <li><strong>Junior High School</strong> – Camarines Sur National High School (2019–2023)</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Technical Skills</h2>
+    <div class="skills">
+      <span>HTML</span>
+      <span>CSS</span>
+      <span>JavaScript</span>
+      <span>C++</span>
+      <span>Python</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Projects</h2>
+    <ul>
+      <li><strong>Solar-Powered Bot</strong> – A robotics project from junior high school that generates power through sunlight to operate a small robot.</li>
+      <li><strong>Notes Application</strong> – A web-based application created using HTML, CSS, and JavaScript that allows users to create, edit, and delete notes efficiently.</li>
+      <li><strong>Calculator</strong> – A functional web-based calculator built with HTML, CSS, and JavaScript for basic arithmetic operations.</li>
+      <li><strong>SkyVoyage Airways</strong> – A business simulation project where I developed a fully functional webpage for the business using HTML, enhancing its online presence and user experience.</li>
+    </ul>
+  </div>
+</div>
+
+<div class="section thank-you">
+  <h2>Thank You</h2>
+  <p>Thank you for taking the time to review my profile. I look forward to opportunities to learn, grow, and contribute to meaningful projects in technology.</p>
+</div>
+
+<script>
+window.addEventListener("scroll", function() {
+  const header = document.getElementById("header");
+  if (window.scrollY > 50) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+});
+</script>
+
+</body>
+</html>
