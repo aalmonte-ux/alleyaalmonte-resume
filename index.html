@@ -34,37 +34,37 @@ body {
 }
 
 /* HEADER */
+/* HEADER FIXED FOR SAME LOOK ON MOBILE */
 .header {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  flex-wrap: nowrap; /* keep in one line */
+  flex-wrap: nowrap; /* prevent stacking */
   background: rgba(15, 25, 45, 0.95);
-  padding: 20px 30px;
+  padding: 15px 30px;
   position: sticky;
   top: 0;
   z-index: 1000;
   border-bottom: 2px solid #00ffcc;
   box-shadow: 0 0 15px rgba(0, 255, 204, 0.2);
-  transition: all 0.3s ease;
 }
 
 .header img.profile-pic {
-  width: 80px;
-  height: 80px;
+  width: 70px;
+  height: 70px;
   border-radius: 50%;
   border: 3px solid #00ffcc;
-  flex-shrink: 0; /* don't shrink */
+  flex-shrink: 0;
 }
 
 .header-info {
-  margin-left: 20px;
-  flex-shrink: 1; /* allow shrinking */
-  min-width: 0; /* allow text to truncate */
+  margin-left: 15px;
+  flex-shrink: 1;
+  min-width: 0;
 }
 
 .header-info h1 {
-  font-size: 15px;
+  font-size: 1rem; /* smaller, consistent */
   color: #00ffcc;
   margin: 0;
   white-space: nowrap;
@@ -75,50 +75,29 @@ body {
 .header-info p {
   margin: 2px 0;
   color: #a0a0a0;
-  font-size: 0.95em;
+  font-size: 0.8rem; /* smaller, consistent */
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
 .contact {
-  margin-left: auto; /* push to right */
+  margin-left: auto;
   flex-shrink: 0;
 }
 
 .contact a {
+  font-size: 0.8rem; /* smaller but readable */
   margin: 0 5px;
   color: #00ffcc;
   text-decoration: none;
   white-space: nowrap;
 }
 
-/* STICKY */
-.header.sticky {
-  padding: 8px 20px;
-}
-
-.header.sticky img.profile-pic {
-  width: 50px;
-  height: 50px;
-}
-
-.header.sticky .header-info h1 {
-  font-size: 1.3em;
-}
-
-/* MOBILE: shrink elements but keep one line */
+/* Prevent mobile stacking, just shrink proportionally */
 @media (max-width: 600px) {
   .header {
     padding: 10px 15px;
-  }
-
-  .header-info h1 {
-    font-size: 12px;
-  }
-
-  .header-info p {
-    font-size: 10px;
   }
 
   .header img.profile-pic {
@@ -126,11 +105,20 @@ body {
     height: 50px;
   }
 
+  .header-info h1 {
+    font-size: 0.9rem;
+  }
+
+  .header-info p {
+    font-size: 0.7rem;
+  }
+
   .contact a {
-    font-size: 10px;
+    font-size: 0.7rem;
     margin: 0 3px;
   }
 }
+
 
 /* SECTIONS */
 h2 {
