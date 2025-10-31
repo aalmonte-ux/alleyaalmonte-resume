@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Alleya T. Almonte — Resume</title>
 <style>
-/* BODY & GENERAL */
 body {
   font-family: 'Times New Roman', Times, serif;
   margin: 0;
@@ -17,13 +16,14 @@ body {
   background-position: center;
 }
 
+/* Container */
 .container {
   max-width: 800px;
-  background: rgba(15, 25, 45, 0.95);
+  background: rgba(15,25,45,0.95);
   margin: 40px auto;
   padding: 30px;
   border-radius: 20px;
-  box-shadow: 0 0 25px rgba(0, 255, 204, 0.2);
+  box-shadow: 0 0 25px rgba(0,255,204,0.2);
 }
 
 h2 {
@@ -34,7 +34,7 @@ h2 {
 }
 
 ul {
-  list-style-type: none;
+  list-style: none;
   padding-left: 0;
 }
 
@@ -42,10 +42,9 @@ li {
   margin-bottom: 8px;
 }
 
-/* HEADER */
+/* Header - always one line */
 .header {
   display: flex;
-  flex-wrap: wrap; /* allows wrapping for small screens */
   align-items: center;
   justify-content: space-between;
   background: rgba(15,25,45,0.95);
@@ -56,41 +55,41 @@ li {
   border-bottom: 2px solid #00ffcc;
   box-shadow: 0 0 15px rgba(0,255,204,0.2);
   gap: 10px;
+  white-space: nowrap; /* prevent wrapping */
 }
 
 .header img.profile-pic {
-  width: 70px;
-  height: 70px;
+  width: clamp(50px,8vw,80px); /* scales between 50px and 80px */
+  height: clamp(50px,8vw,80px);
   border-radius: 50%;
   border: 3px solid #00ffcc;
   flex-shrink: 0;
 }
 
 .header-info {
-  flex: 1 1 200px; /* flexible but has minimum width */
-  min-width: 150px;
+  flex: 1 1 auto;
+  margin: 0 15px;
+  min-width: 0; /* allow shrinking */
 }
 
 .header-info h1 {
-  margin: 0;
+  font-size: clamp(14px, 2vw, 18px);
   color: #00ffcc;
-  font-size: 1.2rem;
-  word-break: break-word;
+  margin: 0;
 }
 
 .header-info p {
-  margin: 2px 0;
+  font-size: clamp(10px, 1.5vw, 14px);
   color: #a0a0a0;
-  font-size: 0.85rem;
-  word-break: break-word;
+  margin: 2px 0 0 0;
 }
 
 .contact {
   display: flex;
-  flex-wrap: wrap; /* wrap if screen is too small */
-  gap: 5px;
-  justify-content: flex-end;
-  font-size: 0.85rem;
+  gap: clamp(5px, 1vw, 15px);
+  align-items: center;
+  flex-shrink: 0;
+  font-size: clamp(10px, 1.5vw, 14px);
 }
 
 .contact a {
@@ -98,21 +97,12 @@ li {
   text-decoration: none;
 }
 
-/* STICKY HEADER */
+/* Sticky header */
 .header.sticky {
   padding: 8px 15px;
 }
 
-.header.sticky img.profile-pic {
-  width: 50px;
-  height: 50px;
-}
-
-.header.sticky .header-info h1 {
-  font-size: 1rem;
-}
-
-/* SKILLS */
+/* Skills */
 .skills span {
   display: inline-block;
   background: #213571;
@@ -120,41 +110,9 @@ li {
   border-radius: 8px;
   margin: 3px;
   color: #00ffcc;
-  font-size: 0.85rem;
+  font-size: clamp(10px,1.5vw,14px);
 }
 
-/* MOBILE RESPONSIVE */
-@media (max-width: 600px) {
-  .header {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 8px;
-  }
-
-  .header-info h1 {
-    font-size: 1rem;
-  }
-
-  .header-info p {
-    font-size: 0.8rem;
-  }
-
-  .contact {
-    justify-content: center;
-    font-size: 0.8rem;
-  }
-
-  .skills span {
-    font-size: 0.75rem;
-    padding: 4px 8px;
-  }
-
-  .container {
-    padding: 20px;
-    margin: 20px;
-  }
-}
 </style>
 </head>
 <body>
@@ -177,7 +135,7 @@ li {
 <div class="container">
   <div class="section">
     <h2>About</h2>
-    <p>I am Alleya T. Almonte, a first-year Computer Science student at Ateneo de Naga University with a strong passion for technology and software development. My interest in programming started with a simple curiosity about how websites and applications work, which eventually led me to explore coding and problem-solving.</p>
+    <p>I am Alleya T. Almonte, a first-year Computer Science student at Ateneo de Naga University with a strong passion for technology and software development. My interest in programming started with curiosity about how websites and applications work, which led me to explore coding and problem-solving.</p>
     <p>I focus on building a strong foundation in HTML, CSS, JavaScript, C++, and Python. I enjoy experimenting with web development projects that combine creativity and logic. My goal is to improve through school projects and internships that challenge me to think critically.</p>
     <p>I aspire to become a skilled software engineer capable of designing systems and applications that solve real-world problems. I stay updated with the latest tools and trends to grow as a developer who creates meaningful solutions.</p>
   </div>
