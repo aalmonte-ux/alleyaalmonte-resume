@@ -37,7 +37,8 @@ body {
 .header {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
+  flex-wrap: nowrap; /* keep in one line */
   background: rgba(15, 25, 45, 0.95);
   padding: 20px 30px;
   position: sticky;
@@ -53,35 +54,43 @@ body {
   height: 80px;
   border-radius: 50%;
   border: 3px solid #00ffcc;
-  transition: all 0.3s ease;
+  flex-shrink: 0; /* don't shrink */
 }
 
 .header-info {
-  flex: 1;
   margin-left: 20px;
+  flex-shrink: 1; /* allow shrinking */
+  min-width: 0; /* allow text to truncate */
 }
 
 .header-info h1 {
   font-size: 15px;
   color: #00ffcc;
   margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .header-info p {
   margin: 2px 0;
   color: #a0a0a0;
   font-size: 0.95em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .contact {
-  text-align: center;
-  color: #a0a0a0;
+  margin-left: auto; /* push to right */
+  flex-shrink: 0;
 }
 
 .contact a {
+  margin: 0 5px;
   color: #00ffcc;
   text-decoration: none;
-  margin: 0 5px;
+  white-space: nowrap;
 }
 
 /* STICKY */
@@ -98,11 +107,9 @@ body {
   font-size: 1.3em;
 }
 
-/* MOBILE: keep straight line, just shrink elements */
+/* MOBILE: shrink elements but keep one line */
 @media (max-width: 600px) {
   .header {
-    flex-direction: row; /* keep horizontal */
-    justify-content: space-between;
     padding: 10px 15px;
   }
 
@@ -125,11 +132,38 @@ body {
   }
 }
 
+/* SECTIONS */
+h2 {
+  font-family: 'Times New Roman', Times, serif;
+  color: #66ffe3;
+  border-bottom: 1px solid #00ffcc;
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+li {
+  margin: 8px 0;
+}
+
+.skills span {
+  display: inline-block;
+  background: #213571;
+  padding: 6px 12px;
+  border-radius: 8px;
+  margin: 4px;
+  color: #00ffcc;
+}
 
 </style>
 </head>
 <body>
 
+<!-- HEADER -->
 <div class="header" id="header">
   <img src="yourphoto.jpg" alt="Profile Picture" class="profile-pic"> 
   <div class="header-info">
@@ -145,6 +179,7 @@ body {
   </div>
 </div>
 
+<!-- MAIN CONTENT -->
 <div class="container">
   <div class="section">
     <h2>About</h2>
@@ -190,6 +225,7 @@ body {
   </div>
 </div>
 
+<!-- STICKY HEADER SCRIPT -->
 <script>
 window.addEventListener("scroll", function() {
   const header = document.getElementById("header");
