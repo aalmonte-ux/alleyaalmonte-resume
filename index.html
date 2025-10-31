@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Alleya T. Almonte — Resume</title>
 <style>
+/* BODY & CONTAINER */
 body {
   font-family: 'Times New Roman', Times, serif;
   margin: 0;
@@ -19,13 +20,14 @@ body {
 /* Container */
 .container {
   max-width: 800px;
-  background: rgba(15,25,45,0.95);
   margin: 40px auto;
   padding: 30px;
+  background: rgba(15,25,45,0.95);
   border-radius: 20px;
   box-shadow: 0 0 25px rgba(0,255,204,0.2);
 }
 
+/* Headers */
 h2 {
   color: #66ffe3;
   border-bottom: 1px solid #00ffcc;
@@ -42,7 +44,7 @@ li {
   margin-bottom: 8px;
 }
 
-/* Header - always one line */
+/* HEADER */
 .header {
   display: flex;
   align-items: center;
@@ -59,7 +61,7 @@ li {
 }
 
 .header img.profile-pic {
-  width: clamp(50px,8vw,80px); /* scales between 50px and 80px */
+  width: clamp(50px,8vw,80px);
   height: clamp(50px,8vw,80px);
   border-radius: 50%;
   border: 3px solid #00ffcc;
@@ -113,6 +115,19 @@ li {
   font-size: clamp(10px,1.5vw,14px);
 }
 
+/* Keep everything proportional on smaller screens */
+@media (max-width: 900px) {
+  .container {
+    padding: 20px;
+    margin: 20px auto;
+  }
+  h2 {
+    font-size: clamp(16px, 3vw, 22px);
+  }
+  p, li {
+    font-size: clamp(12px, 2.5vw, 16px);
+  }
+}
 </style>
 </head>
 <body>
